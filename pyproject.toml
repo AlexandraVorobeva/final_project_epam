@@ -1,17 +1,25 @@
 [tool.poetry]
-name = "fin_proj_epam"
+name = "fin"
 version = "0.1.0"
 description = ""
 authors = ["Aleksandra Vorobeva <V-Sash@mail.ru>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 Flask = "^2.0.0"
-Flask-RESTful = "^0.3.9"
 Flask-Caching = "^1.10.1"
+black = "^21.5b1"
+Flask-RESTful = "^0.3.9"
+flask-swagger-ui = "^3.36.0"
 
 [tool.poetry.dev-dependencies]
+pytest = "^5.2"
+yapf = "^0.31.0"
+black = "^21.5b1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+app = 'fin.app:main'

@@ -2,7 +2,7 @@ import os
 from collections import defaultdict
 from string import punctuation
 from typing import List, Tuple
-from config import DIR
+from .config import DIR
 
 
 def get_names_of_files(dir_path: str) -> dict:
@@ -136,9 +136,9 @@ def group_folder_info(dir_path: str) -> dict:
     syllables = get_phonetic_analysis(prepared_words)[2]
 
     folder_info = {
-        "count of files": count_of_files,
-        "names of files": filenames,
-        "the most common word": most_common_word,
+        "count_of_files": count_of_files,
+        "names_of_files": filenames,
+        "the_most_common_word": most_common_word,
         "the rarest word": rarest_word,
         "average len of words": average_len_of_words,
         "count of vowels": count_of_vowels,
