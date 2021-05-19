@@ -7,7 +7,6 @@ cd final_project_epam<br>
 
 
 Create virtualenv:<br>
-
 virtualenv venv<br>
 source venv/bin/activate<br>
 poetry install<br>
