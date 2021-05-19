@@ -1,16 +1,16 @@
 # final_project_epam
 
-Clone the repo:
-git clone https://github.com/SparklingAcidity/final_project_epam
-cd final_project
+Clone the repo:<br>
+git clone https://github.com/SparklingAcidity/final_project_epam<br>
+cd final_project_epam<br>
 
 
-Create virtualenv:
+Create virtualenv:<br>
 
-virtualenv venv
-source venv/bin/activate
-poetry install
+virtualenv venv<br>
+source venv/bin/activate<br>
+poetry install<br>
 
 
-Run the sample server
-poetry run final_project
+Run the sample server:<br>
+poetry run app<br>
