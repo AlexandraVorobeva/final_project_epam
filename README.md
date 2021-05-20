@@ -24,9 +24,9 @@ $ poetry run app<br>
 $ poetry run pytest<br>
 
 ### API from the command line:
-$ curl -X GET http://127.0.0.1:5000/api/folder<br>
-$ curl -X GET http://127.0.0.1:5000/api/word/питон
-![Screenshot](https://github.com/SparklingAcidity/final_project_epam/blob/for_testing/image/Снимок%20экрана%202021-05-20%20в%2010.30.39.png)
+$ curl -i http://127.0.0.1:5000/api/folder<br>
+$ curl -i http://127.0.0.1:5000/api/word/питон
+
 
 ### API from the browser:
 You can also work on the API directly in your browser, by opening http://127.0.0.1:5000/ , and make GET API requests.
@@ -35,5 +35,5 @@ You can also work on the API directly in your browser, by opening http://127.0.0
 You can use desktop app Postman fot rest requests.<br>
 Run final_project_epam in command line:<br>
 $ poetry run app<br>
-Than use Postman:<br>
+Than use Postman for GET requests for folder and files inside and GET, POST, DELETE for words:<br>
 ![Screenshot](https://github.com/SparklingAcidity/final_project_epam/blob/for_testing/image/Снимок%20экрана%202021-05-20%20в%2010.30.15.png)
