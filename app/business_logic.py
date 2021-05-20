@@ -2,7 +2,7 @@ import os
 from collections import defaultdict
 from string import punctuation
 from typing import List, Tuple
-from .config import DIR
+from app.config import DIR
 
 
 def get_names_of_files(dir_path: str) -> dict:
@@ -27,6 +27,7 @@ def get_names_of_files(dir_path: str) -> dict:
                 }
     return files_info
 
+print(get_names_of_files(DIR))
 
 def get_count_of_files(dir_path: str) -> int:
     """
