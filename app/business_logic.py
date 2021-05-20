@@ -27,7 +27,6 @@ def get_names_of_files(dir_path: str) -> dict:
                 }
     return files_info
 
-print(get_names_of_files(DIR))
 
 def get_count_of_files(dir_path: str) -> int:
     """
@@ -38,6 +37,8 @@ def get_count_of_files(dir_path: str) -> int:
     """
     count_of_files = len(get_names_of_files(dir_path)['names_of_files'])
     return count_of_files
+
+
 
 
 def preparing_files_for_word_analysis(list_of_files: list) -> list:
@@ -74,6 +75,7 @@ def get_common_and_rare_words(words: List[str]) -> dict:
     return top_of_words
 
 
+
 def get_average_word_len(words: List[str]) -> int:
     """
     Get average length of words from list of words.
@@ -84,6 +86,7 @@ def get_average_word_len(words: List[str]) -> int:
     len_of_words = [len(word) for word in words]
     average_word_len = int(sum(len_of_words) / len(len_of_words))
     return average_word_len
+
 
 
 def get_phonetic_analysis(words: List[str]) -> Tuple[int]:
@@ -113,6 +116,7 @@ def get_phonetic_analysis(words: List[str]) -> Tuple[int]:
     return count_of_vowels, count_of_consonants, syllables
 
 
+
 def group_folder_info(dir_path: str) -> dict:
     """
     Group information about folder and files inside the folder into one dict.
@@ -137,9 +141,9 @@ def group_folder_info(dir_path: str) -> dict:
     syllables = get_phonetic_analysis(prepared_words)[2]
 
     folder_info = {
-        "count_of_files": count_of_files,
-        "names_of_files": filenames,
-        "the_most_common_word": most_common_word,
+        "count of files": count_of_files,
+        "names_of files": filenames,
+        "the most common_word": most_common_word,
         "the rarest word": rarest_word,
         "average len of words": average_len_of_words,
         "count of vowels": count_of_vowels,
@@ -148,6 +152,7 @@ def group_folder_info(dir_path: str) -> dict:
     }
 
     return folder_info
+
 
 
 def get_path_for_filename(name: str) -> str:
@@ -232,3 +237,4 @@ def group_word_info(word) -> dict:
     }
 
     return word_info
+
