@@ -1,7 +1,22 @@
 # final_project_epam
 
 ## Flask REST API
-REST API application scans a folder with all subfolders and text files and provides aggregate statistics for certain indicators.
+REST API application scans a folder with all subfolders and text files and provides aggregate statistics for certain indicators.<br>
+
+### Basic functionality:<br>
+1.Web REST API<br>
+2.For a start scan  application scans DIR (base directory) with all subfolders and text files<br>
+3.Information for REST API:<br>
+  -List of folders and files<br>
+	-Count of files<br>
+	-Names_of files<br>
+	-The most common_word<br>
+	-The rarest word<br>
+	-Average length of words<br>
+	-Count of vowels/consonants/syllables<br>
+4.For each file or word you can use RESR API request: 	/api/file/readable-file-id 
+5.You can use this app English and Russian words
+
 
 ## Installation
 ### Clone the repo:<br>
