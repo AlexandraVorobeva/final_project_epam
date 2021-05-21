@@ -3,7 +3,7 @@ from app.business_logic import *
 
 
 test_dir = "app/tests/data_for_test"
-words_for_test = ['питон', 'питон', 'flask', 'python', 'питон']
+words_for_test = ["питон", "питон", "flask", "python", "питон"]
 
 
 def test_get_names_of_files():
@@ -14,7 +14,7 @@ def test_get_names_of_files():
 
 def test_get_common_and_rare_words():
     actual_result = get_common_and_rare_words(words_for_test)
-    expected_result = {'common_word': 'питон', 'rarest_word': 'flask'}
+    expected_result = {"common_word": "питон", "rarest_word": "flask"}
     assert actual_result == expected_result
 
 
@@ -30,8 +30,12 @@ def test_get_phonetic_analysis():
     assert actual_result == expected_result
 
 
-
 def test_group_word_info():
-    actual_result = group_word_info('питон')
-    expected_result = {'len of word': 1, 'count of vowels': 2, 'count of consonants': 3, 'syllables': 2}
+    actual_result = group_word_info("питон")
+    expected_result = {
+        "len of word": 1,
+        "count of vowels": 2,
+        "count of consonants": 3,
+        "syllables": 2,
+    }
     assert actual_result == expected_result

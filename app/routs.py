@@ -10,9 +10,9 @@ app = Flask(__name__)
 api = Api(app)
 swagger = Swagger(app)
 
-cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
+cache = Cache(config={"CACHE_TYPE": "SimpleCache"})
 cache.init_app(app)
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
+app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 
 ALL_WORDS = get_list_of_all_words(DIR)
 
@@ -49,7 +49,7 @@ class File(Resource):
         """
         all_files = get_names_of_files(DIR)["names_of_files"]
         if file_name not in all_files:
-           return {"error 404": "Not found"}, 404
+            return {"error 404": "Not found"}, 404
         path_to_file = get_path_for_filename(file_name)
         file = group_file_info(path_to_file)
         return jsonify({"file": file})
@@ -111,9 +111,9 @@ class Word(Resource):
         if word not in ALL_WORDS:
             return {"error 404": "Not found"}, 404
         ALL_WORDS.remove(word)
-        return jsonify({'result': True})
+        return jsonify({"result": True})
 
 
-api.add_resource(Folder, '/api/folder')
-api.add_resource(File, '/api/file/<string:file_name>')
-api.add_resource(Word, '/api/word/<string:word>', '/api/word/<string:word>', '/api/word/<string:word>')
+api.add_resource(Folder, "/api/folder")
+api.add_resource(File, "/api/file/<string:file_name>")
+api.add_resource(Word, "/api/word/<string:word>", "/api/word/<string:word>", "/api/word/<string:word>")

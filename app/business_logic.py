@@ -18,7 +18,7 @@ def get_names_of_files(dir_path: str) -> dict:
     roots_of_files = []
     for root, dirnames, filenames in os.walk(dir_path):
         for filename in filenames:
-            if filename.endswith('.txt'):
+            if filename.endswith(".txt"):
                 names_of_files.append(filename)
                 roots_of_files.append(os.path.join(root, filename))
                 files_info = {
@@ -35,10 +35,8 @@ def get_count_of_files(dir_path: str) -> int:
         dir_path: path to the folders which will be scan
     Returns: number of file
     """
-    count_of_files = len(get_names_of_files(dir_path)['names_of_files'])
+    count_of_files = len(get_names_of_files(dir_path)["names_of_files"])
     return count_of_files
-
-
 
 
 def preparing_files_for_word_analysis(list_of_files: list) -> list:
@@ -69,11 +67,12 @@ def get_common_and_rare_words(words: List[str]) -> dict:
         if len(word) >= 2:
             counter[word] += 1
             top_of_words = {
-                "common_word": sorted(counter.items(), key=lambda item: item[1], reverse=True)[0][0],
+                "common_word": sorted(
+                    counter.items(), key=lambda item: item[1], reverse=True
+                )[0][0],
                 "rarest_word": sorted(counter.items(), key=lambda item: item[1])[0][0],
             }
     return top_of_words
-
 
 
 def get_average_word_len(words: List[str]) -> int:
@@ -88,7 +87,6 @@ def get_average_word_len(words: List[str]) -> int:
     return average_word_len
 
 
-
 def get_phonetic_analysis(words: List[str]) -> Tuple[int]:
     """
     Get number of vowels, consonants and syllables in list of words.
@@ -97,10 +95,11 @@ def get_phonetic_analysis(words: List[str]) -> Tuple[int]:
     Returns:
         tuple: number of vowels, consonants and syllables
     """
-    VOWELS = ["a", "e", "i", "o", "u", "y", "а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я",]
-    consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t",
-                  "v", "w", "x", "z", "б", "г", "д", "ж", "з", "й", "к", "л", "м", "н", "п", "р",
-                  "с", "т", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ъ",]
+    VOWELS = ["a", "e", "i", "o", "u", "y", "а", "е", "ё", "и", "о", "у",
+              "ы", "э", "ю", "я"]
+    consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r",
+                  "s", "t", "v", "w", "x", "z", "б", "г", "д", "ж", "з", "й", "к", "л",
+                  "м", "н", "п", "р", "с", "т", "ф", "х", "ц", "ч", "ш", "щ", "ь", "ъ",]
 
     count_of_vowels = 0
     count_of_consonants = 0
@@ -114,7 +113,6 @@ def get_phonetic_analysis(words: List[str]) -> Tuple[int]:
 
     syllables = count_of_vowels  # сколько в слове гласных, столько и слогов :)
     return count_of_vowels, count_of_consonants, syllables
-
 
 
 def group_folder_info(dir_path: str) -> dict:
@@ -152,7 +150,6 @@ def group_folder_info(dir_path: str) -> dict:
     }
 
     return folder_info
-
 
 
 def get_path_for_filename(name: str) -> str:
@@ -237,4 +234,3 @@ def group_word_info(word) -> dict:
     }
 
     return word_info
-
