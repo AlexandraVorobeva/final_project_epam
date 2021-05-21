@@ -22,7 +22,7 @@ class Folder(Resource):
     def get(self):
         """
         GET information about home directory.
-        ...
+        Get analysis of home directory.
         ---
         responses:
          code:
@@ -36,16 +36,16 @@ class File(Resource):
     def get(self, file_name):
         """
         GET information about a file.
-        4-5-6
-        ...
+        Get analysis of a file from home directory
+        ---
         parameters:
          - in: path
            name: file_name
            type: string
            required: true
         responses:
-         code:
-           description: ok
+         200:
+           description: file discription
         """
         all_files = get_names_of_files(DIR)["names_of_files"]
         if file_name not in all_files:
@@ -105,8 +105,8 @@ class Word(Resource):
            type: string
            required: true
         responses:
-         201:
-           description: created
+         200:
+           description: ok
         """
         if word not in ALL_WORDS:
             return {"error 404": "Not found"}, 404
