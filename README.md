@@ -1,7 +1,7 @@
 # final_project_epam
 
 ## Flask REST API
-....
+REST API application scans a folder with all nested subfolders and text files and provides aggregate statistics for certain indicators.
 
 ## Installation
 ### Clone the repo:<br>
