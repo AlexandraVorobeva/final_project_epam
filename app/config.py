@@ -13,5 +13,4 @@ cache.init_app(app)
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 
 
-
 DIR = "/Users/aleksandravorobeva/Desktop/litr"
