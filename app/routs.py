@@ -1,18 +1,9 @@
-from flask import Flask, jsonify, abort
-from flask_restful import Resource, Api
-from flask_caching import Cache
-from flasgger import Swagger
+from flask import Flask, jsonify
+from flask_restful import Resource
 import json
-from .config import DIR
+from .config import *
 from .business_logic import *
 
-app = Flask(__name__)
-api = Api(app)
-swagger = Swagger(app)
-
-cache = Cache(config={"CACHE_TYPE": "SimpleCache"})
-cache.init_app(app)
-app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 
 ALL_WORDS = get_list_of_all_words(DIR)
 
@@ -25,8 +16,8 @@ class Folder(Resource):
         Get analysis of home directory.
         ---
         responses:
-         code:
-           description: ok
+         200:
+           description: ok (in case of success)
         """
         folder = group_folder_info(DIR)
         return json.dumps({"folder": folder}, ensure_ascii=False), 200
@@ -45,7 +36,7 @@ class File(Resource):
            required: true
         responses:
          200:
-           description: file discription
+           description: ok (in case of success)
         """
         all_files = get_names_of_files(DIR)["names_of_files"]
         if file_name not in all_files:
@@ -68,8 +59,8 @@ class Word(Resource):
            type: string
            required: true
         responses:
-         code:
-           description: ok
+         200:
+           description: ok (in case of success)
         """
         if word not in ALL_WORDS:
             return {"error 404": "Not found"}, 404
@@ -88,7 +79,7 @@ class Word(Resource):
            required: true
         responses:
          201:
-           description: created
+           description: created (in case of success)
         """
         word_info = group_word_info(word)
         ALL_WORDS.append(word)
@@ -106,7 +97,7 @@ class Word(Resource):
            required: true
         responses:
          200:
-           description: ok
+           description: ok (in case of success)
         """
         if word not in ALL_WORDS:
             return {"error 404": "Not found"}, 404

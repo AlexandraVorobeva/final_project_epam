@@ -1,4 +1,4 @@
-from .routs import app
+from .config import app
 
 
 def main():
