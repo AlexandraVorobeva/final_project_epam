@@ -5,7 +5,7 @@ REST API application scans a folder with all subfolders and text files and provi
 
 ### Basic functionality:<br>
 1.Web REST API<br>
-2.For a start scan  application scans DIR (base directory) with all subfolders and text files<br>
+2.For a start application scans DIR (base directory) with all subfolders and text files<br>
 3.Information for REST API:<br>
   -List of folders and files<br>
 	-Count of files<br>
