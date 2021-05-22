@@ -10,7 +10,7 @@ REST API application scans a folder with all subfolders and text files and provi
   -List of folders and files<br>
 	-Count of files<br>
 	-Names_of files<br>
-	-The most common_word<br>
+	-The most common word<br>
 	-The rarest word<br>
 	-Average length of words<br>
 	-Count of vowels/consonants/syllables<br>
