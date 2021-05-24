@@ -33,7 +33,6 @@ def test_get_phonetic_analysis():
 def test_group_word_info():
     actual_result = group_word_info("питон")
     expected_result = {
-        "len of word": 1,
         "count of vowels": 2,
         "count of consonants": 3,
         "syllables": 2,

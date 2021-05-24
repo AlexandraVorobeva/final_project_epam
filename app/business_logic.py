@@ -221,13 +221,11 @@ def group_word_info(word) -> dict:
     Returns:
         dict: information with characteristics of word
     """
-    len_of_word = get_average_word_len(word)
     count_of_vowels = get_phonetic_analysis(word)[0]
     count_of_consonants = get_phonetic_analysis(word)[1]
     syllables = get_phonetic_analysis(word)[2]
 
     word_info = {
-        "len of word": len_of_word,
         "count of vowels": count_of_vowels,
         "count of consonants": count_of_consonants,
         "syllables": syllables,

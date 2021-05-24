@@ -20,7 +20,7 @@ class Folder(Resource):
            description: ok (in case of success)
         """
         folder = group_folder_info(DIR)
-        return json.dumps({"folder": folder}, ensure_ascii=False), 200
+        return jsonify({"folder": folder})
 
 
 class File(Resource):

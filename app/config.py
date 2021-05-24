@@ -10,7 +10,8 @@ swagger = Swagger(app)
 
 cache = Cache(config={"CACHE_TYPE": "SimpleCache"})
 cache.init_app(app)
-app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 
+app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
+app.config["JSON_SORT_KEYS"] = False
 
 DIR = "/Users/aleksandravorobeva/Desktop/litr"
