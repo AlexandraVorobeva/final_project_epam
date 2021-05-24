@@ -40,7 +40,7 @@ $ poetry run pytest<br>
 
 ### API from the command line:
 $ curl -X GET "http://127.0.0.1:3000/api/file/1.txt"<br>
-$ curl -X GET http://127.0.0.1:3000/api/word/питон
+$ curl -X GET "http://127.0.0.1:3000/api/word/hello"
 
 
 ### API from the browser:
